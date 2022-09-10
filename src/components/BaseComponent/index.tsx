@@ -7,6 +7,7 @@ import styles from './styles';
 const pages = [
     { title: 'Home', arrow: false },
     { title: 'Home2', arrow: false },
+    { title: 'Home3', arrow: false },
 ];
 
 type ComponentProps = {

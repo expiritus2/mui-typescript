@@ -64,7 +64,5 @@
     "lint-staged": ">=10",
     "prettier": "^2.6.2"
   },
-  "lint-staged": {
-    "*.{jsx,js,ts}": ["yarn run format", "eslint --cache --fix"]
-  }
+  "lint-staged": {}
 }
