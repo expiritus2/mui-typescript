@@ -1,21 +1,17 @@
 import React, { FC } from 'react';
 import Box from '@mui/material/Box';
-import { SxProps } from '@mui/system';
-
+import { Theme } from '@mui/material/styles/createTheme';
 import styles from './styles';
-
-const pages = [
-    { title: 'Home', arrow: false },
-    { title: 'Home2', arrow: false },
-    { title: 'Home3', arrow: false },
-];
+import { SystemStyleObject } from '@mui/system/styleFunctionSx/styleFunctionSx';
 
 type ComponentProps = {
-    sx: { wrapper: SxProps };
+    sx?: { wrapper: (theme: Theme) => SystemStyleObject };
 };
 
-const BaseComponent: FC<ComponentProps> = ({ sx = {} }) => {
-    return <Box sx={{ ...styles.wrapper, ...sx.wrapper }}>BaseComponent</Box>;
+const BaseComponent: FC<ComponentProps> = (props) => {
+    const { sx = { wrapper: () => ({}) } } = props;
+
+    return <Box sx={(theme: Theme) => ({ ...styles.wrapper(theme), ...sx.wrapper(theme) })}>BaseComponent</Box>;
 };
 
 export default BaseComponent;

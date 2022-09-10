@@ -1,12 +1,13 @@
 import React from 'react';
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
+import { Navbar } from './components';
 
 function App() {
-  return (
-      <Box>
-        <Button variant="contained" color="purpleDark">Online school</Button>
-      </Box>
-  );
+    return (
+        <Box>
+            <Navbar />
+        </Box>
+    );
 }
 
 export default App;
