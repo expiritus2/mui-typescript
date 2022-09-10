@@ -4,7 +4,10 @@ import { SxProps } from '@mui/system';
 
 import styles from './styles';
 
-const pages = [{ title: 'Home', arrow: false }];
+const pages = [
+    { title: 'Home', arrow: false },
+    { title: 'Home2', arrow: false },
+];
 
 type ComponentProps = {
     sx: { wrapper: SxProps };
